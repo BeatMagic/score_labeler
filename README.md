@@ -1,7 +1,7 @@
 # score_labeler
 score_labeler
 
-Gru and Transformer models are defined at model.py
+GRU and Transformer models are defined at model.py
 
 Training is written in train.py
 
