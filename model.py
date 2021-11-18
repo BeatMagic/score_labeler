@@ -45,7 +45,7 @@ class GRUclassifier(nn.Module):
 #                       nn.Linear(64, 256)])
         self.embeddings = nn.ModuleList([nn.Embedding(512, 512),
                                          nn.Embedding(256, 512),
-                                         nn.Embedding(32, 512)
+                                         nn.Embedding(105, 512)
                                         ])
         self.gru =  nn.GRU(input_size=512,hidden_size=256,num_layers=4,bidirectional=True,dropout=0.2)
 
@@ -82,10 +82,10 @@ class Transformerclassifier(nn.Module):
 #                       nn.Linear(64, 256)])
         self.embeddings = nn.ModuleList([nn.Embedding(512, 512),
                                          nn.Embedding(256, 512),
-                                         nn.Embedding(32, 512)
+                                         nn.Embedding(105, 512)
                                         ])
-        self.encoder_layer = nn.TransformerEncoderLayer(d_model=512, nhead=8, batch_first=True)
-        self.Transformer = nn.TransformerEncoder(self.encoder_layer, num_layers=6)
+        self.encoder_layer = nn.TransformerEncoderLayer(d_model=512, nhead=8, dropout = 0.5, batch_first=True)
+        self.Transformer = nn.TransformerEncoder(self.encoder_layer, num_layers=4)
 
         self.classifier = nn.Sequential(
             nn.Linear(512,512),
@@ -100,7 +100,45 @@ class Transformerclassifier(nn.Module):
 
     def forward(self, features):
         inputs=self.embeddings[0](features[0])+self.embeddings[1](features[1])+self.embeddings[2](features[2])
-        inputs += sinusoid_encoding.cuda()
+        device = inputs.device
+        inputs += sinusoid_encoding.to(device)
         outputs = self.Transformer(inputs)
         result=self.classifier(outputs)
         return result
+
+class Transformerclassifier_concat(nn.Module):
+    def __init__(self):
+        super().__init__()
+#         self.linears=nn.ModuleList([nn.Linear(32, 256),
+#                       nn.Linear(128, 256),
+#                       nn.Linear(80, 256),
+#                       nn.Linear(20, 256),
+#                       nn.Linear(7, 256),
+#                       nn.Linear(256, 256),
+#                       nn.Linear(64, 256)])
+        self.embeddings = nn.ModuleList([nn.Embedding(512, 256),
+                                         nn.Embedding(256, 128),
+                                         nn.Embedding(105, 128)
+                                        ])
+        self.encoder_layer = nn.TransformerEncoderLayer(d_model=512, nhead=8, dropout = 0.2, batch_first=True)
+        self.Transformer = nn.TransformerEncoder(self.encoder_layer, num_layers=6)
+
+        self.classifier = nn.Sequential(
+            nn.Linear(512,512),
+            nn.LeakyReLU(inplace=True), 
+            nn.Dropout(p=0.2),
+            nn.Linear(512, 256),
+            nn.LeakyReLU(inplace=True),
+            nn.Dropout(p=0.2),
+            nn.Linear(256, 50),
+        )
+#         self.linear=nn.Linear(3, 1)
+
+    def forward(self, features):
+        inputs = torch.cat((self.embeddings[0](features[0]), self.embeddings[1](features[1]), self.embeddings[2](features[2])), 2)
+        #inputs=self.embeddings[0](features[0])+self.embeddings[1](features[1])+self.embeddings[2](features[2])
+        device = inputs.device
+        inputs += sinusoid_encoding.to(device)
+        outputs = self.Transformer(inputs)
+        result=self.classifier(outputs)
+        return result 

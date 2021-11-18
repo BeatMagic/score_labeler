@@ -22,7 +22,7 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from pytorch_lightning.callbacks import ModelCheckpoint
 import pdb
-from random import choice
+import random
 
 # save np.load
 np_load_old = np.load
@@ -113,20 +113,21 @@ def note2herz(x):
     y = np.exp(np.log(2) * (x - 69) / 12) * 440.0
     return np.where(x > 1, y, 0)
 
-def data_pading(f0, energy, target):
-    if (target!=0).sum() == 0:
-        return f0, energy, target
-    add_num = np.random.randint(-target[target!=0].min()+1, 49-target.max())
-    target = target[target!=0] + add_num
-    f0 = f0[f0!=0] + add_num
-    energy_num = np.random.normal(1, 1)
-    energy_num = np.clip(energy_num , 0.5 , 3)
-    energy *= energy_num
-    return f0, energy, target
+#def data_pading(f0, energy, target):
+#    if (target!=0).sum() == 0:
+#        return f0, energy, target
+#    add_num = np.random.randint(-target[target!=0].min()+1, 49-target.max())
+#    target = target[target!=0] + add_num
+#    f0 = f0[f0!=0] + add_num
+#    energy_num = np.random.normal(1, 1)
+#    energy_num = np.clip(energy_num , 0.5 , 3)
+#    energy *= energy_num
+#    return f0, energy, target
 
 class ScoreDataset(data.Dataset):
-    def __init__(self, dataset, frame = 256/44100):
+    def __init__(self, dataset, is_train = True):
         self.dataset = dataset
+        self.is_train = is_train
         self.songs_phoneme, self.songs_melody, self.songs_f0, self.songs_energy = [], [], [], []
         for i in range(dataset.shape[0]):
             for j in range(dataset.shape[1]):
@@ -142,13 +143,32 @@ class ScoreDataset(data.Dataset):
         phoneme = self.songs_phoneme[idx]
         melody = self.songs_melody[idx]-40
         target = melody.astype(np.int64)
-        coding=np.concatenate([np.linspace(0,31,f0.shape[0]//2), np.linspace(31,0,f0.shape[0]-f0.shape[0]//2)],0)
+        coding = phoneme
+        #coding=np.concatenate([np.linspace(0,31,f0.shape[0]//2), np.linspace(31,0,f0.shape[0]-f0.shape[0]//2)],0)
+
         target=np.clip(target,0,49)
-        f0, energy, target = data_pading(f0, energy, target)
+
+        if (target!=0).sum() != 0 and self.is_train:
+            #add_num = np.random.randint(-target[target!=0].min()+1, 49-target.max())
+            add_num = random.randint(max(-49, -target[target!=0].min()+1), min(49, 49-target.max()-1))
+            target[target!=0] += add_num
+            f0[f0>40] += add_num
+            energy_num = np.random.normal(1, 0.2)
+            #energy_num = np.clip(energy_num , 0.5 , 3)
+            energy_num = max(min(0.6, energy_num), 0.4)
+            energy *= energy_num 
+
         f0=((np.clip(f0,40.0,90.0)-40.0)/50.0*511).astype(np.int64)
-        energy=((np.clip(energy,0,300.0)/300.0)*255).astype(np.int64) #fanwei
+
+        #x = np.arange(0,f0.shape[0],1)
+        #plt.plot(x, target, 'r')
+        #plt.plot(x, f0, 'g')
+        #plt.savefig('./plot/'+str(idx)+'predict.png')
+
+        energy=((np.clip(energy,0,1))*255).astype(np.int64) #fanwei
         coding=coding.astype(np.int64)
         weight=np.array([1.0])
+
         return (f0,energy,coding,target,weight)
 
     def __len__(self):
@@ -157,8 +177,8 @@ class ScoreDataset(data.Dataset):
 class Pipeline(LightningModule):
     def __init__(self,
         learning_rate: float = 0.0001,
-        batch_size: int = 10,
-        num_workers: int = 16,
+        batch_size: int = 8,
+        num_workers: int = 8,
         val_rate=0.05,
     ):
         super().__init__()
@@ -184,6 +204,15 @@ class Pipeline(LightningModule):
         total_acc = (predict == target).sum()
         total_pre = output.shape[0]*output.shape[1]
         train_acc = total_acc / total_pre
+
+        #x = np.arange(0,1024,1)
+        #y1 = predict[0].cpu().detach().numpy()
+        #y2 = target[0].cpu().detach().numpy()
+        #y3 = data[0][0].cpu().detach().numpy() / 511 * 50
+        #plt.plot(x, y1, 'b')
+        #plt.plot(x, y2, 'r')
+        #plt.plot(x, y3, 'g')
+        #plt.savefig('./plot/'+str(batch_idx)+'predict.png')
         #print('train/acc', train_acc)
         self.log('train/acc', train_acc, on_step=True, on_epoch=True, prog_bar=True)
         self.log('train/loss', loss, on_step=True, on_epoch=True, prog_bar=True)
@@ -215,9 +244,11 @@ class Pipeline(LightningModule):
         fold = 9
         train_dataset = np.concatenate((dataset[0:fold], dataset[fold+1:]), axis=0)
         test_dataset = dataset[fold:fold+1]
-        self.train_dataset = ScoreDataset(train_dataset)
-        #data = self.train_dataset[5]
-        self.validation_dataset = ScoreDataset(test_dataset)
+        self.train_dataset = ScoreDataset(train_dataset, is_train = True)
+        #data = self.train_dataset[0]
+        #for idx in range(len(self.train_dataset)):
+        #    data = self.train_dataset[idx]
+        self.validation_dataset = ScoreDataset(test_dataset, is_train = False)
 
     def train_dataloader(self):
         return DataLoader(self.train_dataset, 
