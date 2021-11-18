@@ -171,7 +171,7 @@ class ScoreDataset(data.Dataset):
             f_coding = interpolate.interp1d(x, coding, kind='nearest')
 
             d_len = f0.shape[0] + int(max(min(random.gauss(0,200),600),-600))
-            d_len = min(1024, d_len)
+            d_len = np.clip(d_len, 650, 1024)
             xnew = np.arange(0, f0.shape[0], f0.shape[0]/(d_len))
             xnew = np.clip(xnew, 0, f0.shape[0]-1)
 
