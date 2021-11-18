@@ -22,6 +22,7 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from pytorch_lightning.callbacks import ModelCheckpoint
 import pdb
+from scipy import interpolate
 import random
 
 # save np.load
@@ -77,11 +78,13 @@ def pad_data(inputs):
         if np.shape(x)[0] > max_len:
             raise ValueError("not max_len")
 
+#         s = np.shape(x)[1]
         x = np.pad(x, (0, max_len - np.shape(x)
                        [0]), mode='constant', constant_values=0)
 
         return x
 
+    #max_len = max(np.shape(x)[0] for x in inputs)
     max_len = 1024
     pad_output = np.stack([pad(x, max_len) for x in inputs])
 
@@ -99,6 +102,9 @@ def collate_fn(batch):
     coding_padded=pad_data(codings)
     target_padded=pad_data(targets)
     weights=np.concatenate(weights,0)
+#     print(weights.shape)
+#     print(weights)
+#     print(f0_padded.shape,energy_padded.shape,coding_padded.shape,target_padded.shape)
 
     return (torch.LongTensor(f0_padded),
            torch.LongTensor(energy_padded),
@@ -155,8 +161,26 @@ class ScoreDataset(data.Dataset):
             f0[f0>40] += add_num
             energy_num = np.random.normal(1, 0.2)
             #energy_num = np.clip(energy_num , 0.5 , 3)
-            energy_num = max(min(0.6, energy_num), 0.4)
+            energy_num = max(min(1.6, energy_num), 0.4)
             energy *= energy_num 
+
+            x = np.arange(0, f0.shape[0], 1)
+            f_energy = interpolate.interp1d(x, energy, kind='linear')
+            f_f0 = interpolate.interp1d(x, f0, kind='linear')
+            f_target = interpolate.interp1d(x, target, kind='nearest')
+            f_coding = interpolate.interp1d(x, coding, kind='nearest')
+
+            d_len = f0.shape[0] + int(max(min(random.gauss(0,200),600),-600))
+            d_len = min(1024, d_len)
+            xnew = np.arange(0, f0.shape[0], f0.shape[0]/(d_len))
+            xnew = np.clip(xnew, 0, f0.shape[0]-1)
+
+            energy = f_energy(xnew)
+            f0 = f_f0(xnew)
+            target = f_target(xnew)
+            coding = f_coding(xnew)
+            #plt.plot(x, energy, 'o', xnew, energy_new, '-')
+            #plt.savefig('plot.png')
 
         f0=((np.clip(f0,40.0,90.0)-40.0)/50.0*511).astype(np.int64)
 
@@ -167,6 +191,7 @@ class ScoreDataset(data.Dataset):
 
         energy=((np.clip(energy,0,1))*255).astype(np.int64) #fanwei
         coding=coding.astype(np.int64)
+        target = target.astype(np.int64)
         weight=np.array([1.0])
 
         return (f0,energy,coding,target,weight)
@@ -245,7 +270,7 @@ class Pipeline(LightningModule):
         train_dataset = np.concatenate((dataset[0:fold], dataset[fold+1:]), axis=0)
         test_dataset = dataset[fold:fold+1]
         self.train_dataset = ScoreDataset(train_dataset, is_train = True)
-        #data = self.train_dataset[0]
+        #data = self.train_dataset[10]
         #for idx in range(len(self.train_dataset)):
         #    data = self.train_dataset[idx]
         self.validation_dataset = ScoreDataset(test_dataset, is_train = False)
