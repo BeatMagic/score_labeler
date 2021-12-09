@@ -1,35 +1,20 @@
-import numpy as np
-import os
-import time
-import pickle as pkl
-import random
-
 import torch
-# import torchaudio
 import torch.nn as nn
+import torch.optim as optim
 import torch.nn.functional as F
 from torch import optim
 import torch.utils.data as data
 from torch.utils.data import DataLoader
-from torch.utils.tensorboard import SummaryWriter
+import numpy as np
 import argparse
-from pytorch_lightning.core import LightningModule
-from pytorch_lightning import Trainer
-from model import GRUclassifier, Transformerclassifier, Transformerclassifier_concat
-from prefetch_generator import BackgroundGenerator
 from torch.autograd import Variable
-from tqdm import tqdm
 import matplotlib.pyplot as plt
 from pytorch_lightning.callbacks import ModelCheckpoint
+from pytorch_lightning.core import LightningModule
+from pytorch_lightning import Trainer
+from Train_lightning import Pipeline
+from collections import Counter
 import pdb
-from scipy import interpolate
-import random
-
-# save np.load
-np_load_old = np.load
-
-# modify the default parameters of np.load
-np.load = lambda *a,**k: np_load_old(*a, allow_pickle=True, **k)
 
 class FocalLoss(nn.Module):
     def __init__(self, class_num, alpha=None, gamma=2, size_average=True):
@@ -73,17 +58,14 @@ class FocalLoss(nn.Module):
         return loss
 
 def pad_data_(inputs):
-
     def pad(x, max_len):
         if np.shape(x)[0] > max_len:
             raise ValueError("not max_len")
 
-#         s = np.shape(x)[1]
         x = np.pad(x, ((0, 0),(0, max_len - np.shape(x)[1])), mode='constant', constant_values=0.0)
 
         return x
 
-    #max_len = max(np.shape(x)[0] for x in inputs)
     max_len = 1024
     pad_output = np.stack([pad(x, max_len) for x in inputs])
 
@@ -95,12 +77,10 @@ def pad_data(inputs):
         if np.shape(x)[0] > max_len:
             raise ValueError("not max_len")
 
-#         s = np.shape(x)[1]
         x = np.pad(x, (0, max_len - np.shape(x)[0]), mode='constant', constant_values=0)
 
         return x
 
-    #max_len = max(np.shape(x)[0] for x in inputs)
     max_len = 1024
     pad_output = np.stack([pad(x, max_len) for x in inputs])
 
@@ -122,15 +102,13 @@ def collate_fn(batch):
     weights=np.concatenate(weights,0)
     mfcc_padded=pad_data_(mfcc)
     mel_padded=pad_data_(mel)
-#     print(weights.shape)
-#     print(weights)
-#     print(f0_padded.shape,energy_padded.shape,coding_padded.shape,target_padded.shape)
 
     return (torch.LongTensor(f0_padded),
            torch.LongTensor(energy_padded),
            torch.LongTensor(coding_padded),
            torch.Tensor(mfcc_padded),
            torch.Tensor(mel_padded)),(torch.LongTensor(target_padded)),torch.FloatTensor(weights)
+
 def herz2note(x):
     x = np.where(x > 1, x, 1)
     y = 69 + 12 * np.log(x / 440.0) / np.log(2)
@@ -140,17 +118,6 @@ def note2herz(x):
     x = np.where(x > 1, x, 1)
     y = np.exp(np.log(2) * (x - 69) / 12) * 440.0
     return np.where(x > 1, y, 0)
-
-#def data_pading(f0, energy, target):
-#    if (target!=0).sum() == 0:
-#        return f0, energy, target
-#    add_num = np.random.randint(-target[target!=0].min()+1, 49-target.max())
-#    target = target[target!=0] + add_num
-#    f0 = f0[f0!=0] + add_num
-#    energy_num = np.random.normal(1, 1)
-#    energy_num = np.clip(energy_num , 0.5 , 3)
-#    energy *= energy_num
-#    return f0, energy, target
 
 class ScoreDataset(data.Dataset):
     def __init__(self, dataset, is_train = True):
@@ -226,118 +193,105 @@ class ScoreDataset(data.Dataset):
     def __len__(self):
         return len(self.songs_phoneme)
 
-class Pipeline(LightningModule):
-    def __init__(self,
-        learning_rate: float = 0.0001,
-        batch_size: int = 8,
-        num_workers: int = 12,
-        val_rate=0.05,
-    ):
-        super().__init__()
-        
-        self.val_rate=val_rate #0.05
-        self.save_hyperparameters()
-        #self.net = Transformerclassifier()
-        self.net = Transformerclassifier_concat()
-        #self.net = GRUclassifier()
-        self.criterion = FocalLoss(50)
+def process_function(predict, coding):
+    batch_size, seq_len = predict.shape[0], predict.shape[1]
+    for i in range(batch_size):
+        predict_stp = predict[i]
+        coding_stp = coding[i]
+        #target_stp = target[i]
+        start = 0
+        for j in range(1, seq_len+1):
+            if j == seq_len or coding_stp[j] != coding_stp[j-1]:
+                end = j
+                process_predict = predict_stp[start:end]
+                #process_predict[0] = 1
+                #process_predict[46:50] = 2
+                length = end-start
+                if length == 0:
+                    continue
+                value_start = 0
+                for k in range(1, length):
+                    if process_predict[k] != process_predict[k-1]:
+                        if k - value_start >= 16:
+                            value_start = k
+                        elif k - value_start < 16:
+                            process_predict[value_start:k] = process_predict[k]
+                predict[i][start:end] = process_predict[:]
+                start = end
+    return predict
 
-    def forward(self, x):
-        return self.net(x)
-        
-    def training_step(self, batch, batch_idx):
-        data, target, weights = batch
-        output = self(data)
-        loss = self.criterion(output,target,weights)
-
-        softmax = nn.Softmax(dim = 2)
-        predict = softmax(output)
-        predict = predict.argmax(dim=2)
-        total_acc = (predict == target).sum()
-        total_pre = output.shape[0]*output.shape[1]
-        train_acc = total_acc / total_pre
-
-        #x = np.arange(0,1024,1)
-        #y1 = predict[0].cpu().detach().numpy()
-        #y2 = target[0].cpu().detach().numpy()
-        #y3 = data[0][0].cpu().detach().numpy() / 511 * 50
-        #plt.plot(x, y1, 'b')
-        #plt.plot(x, y2, 'r')
-        #plt.plot(x, y3, 'g')
-        #plt.savefig('./plot/'+str(batch_idx)+'predict.png')
-        #print('train/acc', train_acc)
-        self.log('train/acc', train_acc, on_step=True, on_epoch=True, prog_bar=True)
-        self.log('train/loss', loss, on_step=True, on_epoch=True, prog_bar=True)
-        return loss
-    
-    def validation_step(self, batch, batch_idx):
-        data, target, weights = batch
-        output = self(data)
-        val_loss = self.criterion(output,target,weights)
-
-        softmax = nn.Softmax(dim = 2)
-        predict = softmax(output)
-        predict = predict.argmax(dim=2)
-        total_acc = (predict == target).sum()
-        total_pre = output.shape[0]*output.shape[1]
-        test_acc = total_acc / total_pre
-        #print('val/acc', test_acc)
-        self.log('val/acc', test_acc, on_step=False, on_epoch=True, prog_bar=True)
-        self.log('val/loss', val_loss, on_step=False, on_epoch=True, prog_bar=True)
-        
-    def configure_optimizers(self):
-        optimizer = optim.AdamW(self.parameters(), lr=self.hparams.learning_rate)
-        #scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
-        #lr_scheduler = {"scheduler": scheduler }
-        #return [optimizer], [lr_scheduler]
-        return [optimizer], [] 
-
-    def setup(self, stage):
-        dataset = np.load("dataset_10_fold_1024.npy")
-        fold = 9
-        train_dataset = np.concatenate((dataset[0:fold], dataset[fold+1:]), axis=0)
-        test_dataset = dataset[fold:fold+1]
-        self.train_dataset = ScoreDataset(train_dataset, is_train = True)
-        #data = self.train_dataset[10]
-        #for idx in range(len(self.train_dataset)):
-        #    data = self.train_dataset[idx]
-        self.validation_dataset = ScoreDataset(test_dataset, is_train = False)
-
-    def train_dataloader(self):
-        DAtaloader =  DataLoader(self.train_dataset, 
-            batch_size = self.hparams.batch_size,
-            collate_fn = collate_fn, 
-            shuffle=True, 
-            drop_last=True, 
-            num_workers=self.hparams.num_workers)
-        #for data in DAtaloader:
-            #mel: torch.Size([8, 80, 1024])
-            #mfcc: torch.Size([8, 20, 1024])
-        return DAtaloader
-
-    def val_dataloader(self):
-        return DataLoader(self.validation_dataset, 
-            batch_size=self.hparams.batch_size, 
-            collate_fn = collate_fn, 
-            shuffle=False, 
-            drop_last=False, 
-            num_workers=self.hparams.num_workers)
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='score_labeler.py')
     parser.add_argument('--batch_size', type=str, default=8, help="batch size")
-    #parser.add_argument('--seqlen', type=str, default=1024, help="seqlen")
+    parser.add_argument('--seqlen', type=str, default=1024, help="seqlen")
     parser.add_argument('--learning_rate', type=str, default=0.0001, help="learning rate")
     parser.add_argument('--num_epochs', type=str, default=10, help="num pochs")
+
     opt = parser.parse_args()
 
-    model=Pipeline(learning_rate = opt.learning_rate, batch_size = opt.batch_size, )
-    checkpoint_callback = ModelCheckpoint(monitor='val/loss',save_top_k = 1)
-    trainer = Trainer(gpus=6, max_epochs=200,
-                  distributed_backend="ddp",
-                  log_every_n_steps=1,
-                  resume_from_checkpoint="lightning_logs/version_1/checkpoints/epoch=84-step=12409.ckpt",
-                  callbacks=[checkpoint_callback],
-                  progress_bar_refresh_rate=1)
-                  #profiler="simple")
-    trainer.fit(model)
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    # save np.load
+    #np_load_old = np.load
+
+    # modify the default parameters of np.load
+    #np.load = lambda *a,**k: np_load_old(*a, allow_pickle=True, **k)
+
+    dataset = np.load("dataset_10_fold_1024.npy")
+    test_dataset = dataset[9:10]
+    test_dataset = ScoreDataset(test_dataset, is_train = False)
+    test_loader = DataLoader(test_dataset, batch_size=opt.batch_size, collate_fn = collate_fn, shuffle=False, drop_last=False, num_workers=4)
+    criterion = FocalLoss(50)
+    PATH = "/home/baochunhui/score_labeler/lightning_logs/add_mfcc_mel/checkpoints/epoch=190-step=27885.ckpt"
+    Pipeline = Pipeline.load_from_checkpoint(PATH)
+    model = Pipeline.net
+    model = model.to(device)
+    model.eval()
+
+    total_loss = 0.0
+    total = 0.0
+    total_acc = 0.0
+    total_pre = 0.0
+    for iter, testdata in enumerate(test_loader):
+        with torch.no_grad():
+            data, target, weights = testdata
+            data = list(data)
+            data[0] = Variable(data[0].to(device))
+            data[1] = Variable(data[1].to(device))
+            data[2] = Variable(data[2].to(device))
+            data[3] = Variable(data[3].to(device))
+            data[4] = Variable(data[4].to(device))
+            data = tuple(data)
+            target = Variable(target.to(device))
+            weights = Variable(weights.to(device))
+
+            output = model(data)
+            loss = criterion(output,target,weights)
+
+            total += output.shape[0]
+            total_loss += loss
+
+            softmax = nn.Softmax(dim = 2)
+            predict = softmax(output)
+            predict = predict.argmax(dim=2)
+
+            predict = process_function(predict, data[2])
+            '''
+            coding = data[2][2].cpu().detach().numpy()
+            x = np.arange(0,1024,1)
+            y1 = predict[2].cpu().detach().numpy()
+            y2 = target[2].cpu().detach().numpy()
+            y3 = data[0][2].cpu().detach().numpy() / 511 * 50
+            plt.plot(x, y1, 'b')
+            plt.plot(x, y2, 'r')
+            plt.plot(x, y3, 'g')
+            pdb.set_trace()
+            plt.savefig('predict.png')
+            '''
+            total_acc += (predict == target).sum()
+            total_pre += output.shape[0]*output.shape[1]
+
+    test_loss_= total_loss / total
+    test_acc_ = (total_acc / total_pre).item()
+
+    print('Testing Loss: %.5f, Testing Acc: %.5f' % (test_loss_, test_acc_))

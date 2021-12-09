@@ -15,7 +15,7 @@ np.load = lambda *a,**k: np_load_old(*a, allow_pickle=True, **k)
 dataset = np.load("dataset.npy")
 dataset = dataset.item()
 
-def split(phoneme, melody, f0, energy):
+def split(phoneme, melody, f0, energy, mfcc, mel):
     data = []
     length = phoneme.shape[0]
     crr_begin = 0
@@ -30,10 +30,12 @@ def split(phoneme, melody, f0, energy):
                 crr_begin = i+1
             elif total_len + crr_len > 1024:
                 pho = phoneme[total_begin:crr_begin]
-                mel = melody[total_begin:crr_begin]
+                melo = melody[total_begin:crr_begin]
                 f   = f0[total_begin:crr_begin]
                 ene = energy[total_begin:crr_begin]
-                data.append((pho, mel, f, ene)) #phoneme, melody, f0, energy
+                mf  = mfcc[:, total_begin:crr_begin]
+                me  = mel[:, total_begin:crr_begin]
+                data.append((pho, melo, f, ene, mf, me)) #phoneme, melody, f0, energy
                 total_len = crr_len
                 total_begin = crr_begin
                 crr_begin = i+1
@@ -45,7 +47,9 @@ for song in dataset.keys():
     melody = dataset[song]['melody']
     f0 = dataset[song]['f0']
     energy = dataset[song]['energy'].squeeze(0)
-    data = split(phoneme, melody, f0, energy)
+    mfcc = dataset[song]['mfcc']
+    mel = dataset[song]['mel']
+    data = split(phoneme, melody, f0, energy, mfcc, mel)
     split_data += data
 
 index = []
