@@ -1,0 +1,4076 @@
+{
+    "language":"zh",
+    "dict": {
+        "zi": [
+            "z",
+            "ii"
+        ],
+        "ci": [
+            "c",
+            "ii"
+        ],
+        "si": [
+            "s",
+            "ii"
+        ],
+        "zhi": [
+            "zh",
+            "iii"
+        ],
+        "chi": [
+            "ch",
+            "iii"
+        ],
+        "shi": [
+            "sh",
+            "iii"
+        ],
+        "ri": [
+            "iii"
+        ],
+        "bi": [
+            "b",
+            "i"
+        ],
+        "pi": [
+            "p",
+            "i"
+        ],
+        "mi": [
+            "m",
+            "i"
+        ],
+        "fi": [
+            "f",
+            "i"
+        ],
+        "di": [
+            "d",
+            "i"
+        ],
+        "ti": [
+            "t",
+            "i"
+        ],
+        "ni": [
+            "n",
+            "i"
+        ],
+        "li": [
+            "l",
+            "i"
+        ],
+        "zyi": [
+            "z",
+            "i"
+        ],
+        "cyi": [
+            "c",
+            "i"
+        ],
+        "syi": [
+            "s",
+            "i"
+        ],
+        "zhyi": [
+            "zh",
+            "i"
+        ],
+        "chyi": [
+            "ch",
+            "i"
+        ],
+        "shyi": [
+            "sh",
+            "i"
+        ],
+        "ryi": [
+            "r",
+            "i"
+        ],
+        "ji": [
+            "j",
+            "i"
+        ],
+        "qi": [
+            "q",
+            "i"
+        ],
+        "xi": [
+            "x",
+            "i"
+        ],
+        "gi": [
+            "g",
+            "i"
+        ],
+        "ki": [
+            "k",
+            "i"
+        ],
+        "hi": [
+            "h",
+            "i"
+        ],
+        "yi": [
+            "i"
+        ],
+        "bu": [
+            "b",
+            "u"
+        ],
+        "pu": [
+            "p",
+            "u"
+        ],
+        "mu": [
+            "m",
+            "u"
+        ],
+        "fu": [
+            "f",
+            "u"
+        ],
+        "du": [
+            "d",
+            "u"
+        ],
+        "tu": [
+            "t",
+            "u"
+        ],
+        "nu": [
+            "n",
+            "u"
+        ],
+        "lu": [
+            "l",
+            "u"
+        ],
+        "zu": [
+            "z",
+            "u"
+        ],
+        "cu": [
+            "c",
+            "u"
+        ],
+        "su": [
+            "s",
+            "u"
+        ],
+        "zhu": [
+            "zh",
+            "u"
+        ],
+        "chu": [
+            "ch",
+            "u"
+        ],
+        "shu": [
+            "sh",
+            "u"
+        ],
+        "ru": [
+            "r",
+            "u"
+        ],
+        "gu": [
+            "g",
+            "u"
+        ],
+        "ku": [
+            "k",
+            "u"
+        ],
+        "hu": [
+            "h",
+            "u"
+        ],
+        "wu": [
+            "u"
+        ],
+        "bv": [
+            "b",
+            "v"
+        ],
+        "pv": [
+            "p",
+            "v"
+        ],
+        "mv": [
+            "m",
+            "v"
+        ],
+        "fv": [
+            "f",
+            "v"
+        ],
+        "dv": [
+            "d",
+            "v"
+        ],
+        "tv": [
+            "t",
+            "v"
+        ],
+        "nv": [
+            "n",
+            "v"
+        ],
+        "lv": [
+            "l",
+            "v"
+        ],
+        "zv": [
+            "z",
+            "v"
+        ],
+        "cv": [
+            "c",
+            "v"
+        ],
+        "sv": [
+            "s",
+            "v"
+        ],
+        "zhv": [
+            "zh",
+            "v"
+        ],
+        "chv": [
+            "ch",
+            "v"
+        ],
+        "shv": [
+            "sh",
+            "v"
+        ],
+        "rv": [
+            "r",
+            "v"
+        ],
+        "ju": [
+            "j",
+            "v"
+        ],
+        "qu": [
+            "q",
+            "v"
+        ],
+        "xu": [
+            "x",
+            "v"
+        ],
+        "gv": [
+            "g",
+            "v"
+        ],
+        "kv": [
+            "k",
+            "v"
+        ],
+        "hv": [
+            "h",
+            "v"
+        ],
+        "yu": [
+            "v"
+        ],
+        "ba": [
+            "b",
+            "a"
+        ],
+        "pa": [
+            "p",
+            "a"
+        ],
+        "ma": [
+            "m",
+            "a"
+        ],
+        "fa": [
+            "f",
+            "a"
+        ],
+        "da": [
+            "d",
+            "a"
+        ],
+        "ta": [
+            "t",
+            "a"
+        ],
+        "na": [
+            "n",
+            "a"
+        ],
+        "la": [
+            "l",
+            "a"
+        ],
+        "za": [
+            "z",
+            "a"
+        ],
+        "ca": [
+            "c",
+            "a"
+        ],
+        "sa": [
+            "s",
+            "a"
+        ],
+        "zha": [
+            "zh",
+            "a"
+        ],
+        "cha": [
+            "ch",
+            "a"
+        ],
+        "sha": [
+            "sh",
+            "a"
+        ],
+        "ra": [
+            "r",
+            "a"
+        ],
+        "ga": [
+            "g",
+            "a"
+        ],
+        "ka": [
+            "k",
+            "a"
+        ],
+        "ha": [
+            "h",
+            "a"
+        ],
+        "a": [
+            "a"
+        ],
+        "bia": [
+            "b",
+            "ia"
+        ],
+        "pia": [
+            "p",
+            "ia"
+        ],
+        "mia": [
+            "m",
+            "ia"
+        ],
+        "fia": [
+            "f",
+            "ia"
+        ],
+        "dia": [
+            "d",
+            "ia"
+        ],
+        "tia": [
+            "t",
+            "ia"
+        ],
+        "nia": [
+            "n",
+            "ia"
+        ],
+        "lia": [
+            "l",
+            "ia"
+        ],
+        "zia": [
+            "z",
+            "ia"
+        ],
+        "cia": [
+            "c",
+            "ia"
+        ],
+        "sia": [
+            "s",
+            "ia"
+        ],
+        "jia": [
+            "j",
+            "ia"
+        ],
+        "qia": [
+            "q",
+            "ia"
+        ],
+        "xia": [
+            "x",
+            "ia"
+        ],
+        "gia": [
+            "g",
+            "ia"
+        ],
+        "kia": [
+            "k",
+            "ia"
+        ],
+        "hia": [
+            "h",
+            "ia"
+        ],
+        "ya": [
+            "ia"
+        ],
+        "bua": [
+            "b",
+            "ua"
+        ],
+        "pua": [
+            "p",
+            "ua"
+        ],
+        "mua": [
+            "m",
+            "ua"
+        ],
+        "fua": [
+            "f",
+            "ua"
+        ],
+        "dua": [
+            "d",
+            "ua"
+        ],
+        "tua": [
+            "t",
+            "ua"
+        ],
+        "nua": [
+            "n",
+            "ua"
+        ],
+        "lua": [
+            "l",
+            "ua"
+        ],
+        "zua": [
+            "z",
+            "ua"
+        ],
+        "cua": [
+            "c",
+            "ua"
+        ],
+        "sua": [
+            "s",
+            "ua"
+        ],
+        "zhua": [
+            "zh",
+            "ua"
+        ],
+        "chua": [
+            "ch",
+            "ua"
+        ],
+        "shua": [
+            "sh",
+            "ua"
+        ],
+        "rua": [
+            "r",
+            "ua"
+        ],
+        "gua": [
+            "g",
+            "ua"
+        ],
+        "kua": [
+            "k",
+            "ua"
+        ],
+        "hua": [
+            "h",
+            "ua"
+        ],
+        "wa": [
+            "ua"
+        ],
+        "beh": [
+            "b",
+            "eh"
+        ],
+        "peh": [
+            "p",
+            "eh"
+        ],
+        "meh": [
+            "m",
+            "eh"
+        ],
+        "feh": [
+            "f",
+            "eh"
+        ],
+        "deh": [
+            "d",
+            "eh"
+        ],
+        "teh": [
+            "t",
+            "eh"
+        ],
+        "neh": [
+            "n",
+            "eh"
+        ],
+        "leh": [
+            "l",
+            "eh"
+        ],
+        "zeh": [
+            "z",
+            "eh"
+        ],
+        "ceh": [
+            "c",
+            "eh"
+        ],
+        "seh": [
+            "s",
+            "eh"
+        ],
+        "zheh": [
+            "zh",
+            "eh"
+        ],
+        "cheh": [
+            "ch",
+            "eh"
+        ],
+        "sheh": [
+            "sh",
+            "eh"
+        ],
+        "reh": [
+            "r",
+            "eh"
+        ],
+        "geh": [
+            "g",
+            "eh"
+        ],
+        "keh": [
+            "k",
+            "eh"
+        ],
+        "heh": [
+            "h",
+            "eh"
+        ],
+        "eh": [
+            "eh"
+        ],
+        "be": [
+            "b",
+            "e"
+        ],
+        "pe": [
+            "p",
+            "e"
+        ],
+        "me": [
+            "m",
+            "e"
+        ],
+        "fe": [
+            "f",
+            "e"
+        ],
+        "de": [
+            "d",
+            "e"
+        ],
+        "te": [
+            "t",
+            "e"
+        ],
+        "ne": [
+            "n",
+            "e"
+        ],
+        "le": [
+            "l",
+            "e"
+        ],
+        "ze": [
+            "z",
+            "e"
+        ],
+        "ce": [
+            "c",
+            "e"
+        ],
+        "se": [
+            "s",
+            "e"
+        ],
+        "zhe": [
+            "zh",
+            "e"
+        ],
+        "che": [
+            "ch",
+            "e"
+        ],
+        "she": [
+            "sh",
+            "e"
+        ],
+        "re": [
+            "r",
+            "e"
+        ],
+        "ge": [
+            "g",
+            "e"
+        ],
+        "ke": [
+            "k",
+            "e"
+        ],
+        "he": [
+            "h",
+            "e"
+        ],
+        "e": [
+            "e"
+        ],
+        "bo": [
+            "b",
+            "uo"
+        ],
+        "po": [
+            "p",
+            "uo"
+        ],
+        "mo": [
+            "m",
+            "uo"
+        ],
+        "fo": [
+            "f",
+            "uo"
+        ],
+        "duo": [
+            "d",
+            "uo"
+        ],
+        "tuo": [
+            "t",
+            "uo"
+        ],
+        "nuo": [
+            "n",
+            "uo"
+        ],
+        "luo": [
+            "l",
+            "uo"
+        ],
+        "zuo": [
+            "z",
+            "uo"
+        ],
+        "cuo": [
+            "c",
+            "uo"
+        ],
+        "suo": [
+            "s",
+            "uo"
+        ],
+        "zhuo": [
+            "zh",
+            "uo"
+        ],
+        "chuo": [
+            "ch",
+            "uo"
+        ],
+        "shuo": [
+            "sh",
+            "uo"
+        ],
+        "ruo": [
+            "r",
+            "uo"
+        ],
+        "guo": [
+            "g",
+            "uo"
+        ],
+        "kuo": [
+            "k",
+            "uo"
+        ],
+        "huo": [
+            "h",
+            "uo"
+        ],
+        "wo": [
+            "uo"
+        ],
+        "lo": [
+            "l",
+            "o"
+        ],
+        "o": [
+            "o"
+        ],
+        "yo": [
+            "io"
+        ],
+        "bae": [
+            "b",
+            "ae"
+        ],
+        "pae": [
+            "p",
+            "ae"
+        ],
+        "mae": [
+            "m",
+            "ae"
+        ],
+        "fae": [
+            "f",
+            "ae"
+        ],
+        "dae": [
+            "d",
+            "ae"
+        ],
+        "tae": [
+            "t",
+            "ae"
+        ],
+        "nae": [
+            "n",
+            "ae"
+        ],
+        "lae": [
+            "l",
+            "ae"
+        ],
+        "zae": [
+            "z",
+            "ae"
+        ],
+        "cae": [
+            "c",
+            "ae"
+        ],
+        "sae": [
+            "s",
+            "ae"
+        ],
+        "zhae": [
+            "zh",
+            "ae"
+        ],
+        "chae": [
+            "ch",
+            "ae"
+        ],
+        "shae": [
+            "sh",
+            "ae"
+        ],
+        "rae": [
+            "r",
+            "ae"
+        ],
+        "gae": [
+            "g",
+            "ae"
+        ],
+        "kae": [
+            "k",
+            "ae"
+        ],
+        "hae": [
+            "h",
+            "ae"
+        ],
+        "ae": [
+            "ae"
+        ],
+        "bie": [
+            "b",
+            "ie"
+        ],
+        "pie": [
+            "p",
+            "ie"
+        ],
+        "mie": [
+            "m",
+            "ie"
+        ],
+        "fie": [
+            "f",
+            "ie"
+        ],
+        "die": [
+            "d",
+            "ie"
+        ],
+        "tie": [
+            "t",
+            "ie"
+        ],
+        "nie": [
+            "n",
+            "ie"
+        ],
+        "lie": [
+            "l",
+            "ie"
+        ],
+        "zie": [
+            "z",
+            "ie"
+        ],
+        "cie": [
+            "c",
+            "ie"
+        ],
+        "sie": [
+            "s",
+            "ie"
+        ],
+        "zhie": [
+            "zh",
+            "ie"
+        ],
+        "chie": [
+            "ch",
+            "ie"
+        ],
+        "shie": [
+            "sh",
+            "ie"
+        ],
+        "rie": [
+            "r",
+            "ie"
+        ],
+        "jie": [
+            "j",
+            "ie"
+        ],
+        "qie": [
+            "q",
+            "ie"
+        ],
+        "xie": [
+            "x",
+            "ie"
+        ],
+        "gie": [
+            "g",
+            "ie"
+        ],
+        "kie": [
+            "k",
+            "ie"
+        ],
+        "hie": [
+            "h",
+            "ie"
+        ],
+        "ye": [
+            "ie"
+        ],
+        "ruae": [
+            "r",
+            "uae"
+        ],
+        "bve": [
+            "b",
+            "ve"
+        ],
+        "pve": [
+            "p",
+            "ve"
+        ],
+        "mve": [
+            "m",
+            "ve"
+        ],
+        "fve": [
+            "f",
+            "ve"
+        ],
+        "dve": [
+            "d",
+            "ve"
+        ],
+        "tve": [
+            "t",
+            "ve"
+        ],
+        "nve": [
+            "n",
+            "ve"
+        ],
+        "lve": [
+            "l",
+            "ve"
+        ],
+        "jue": [
+            "j",
+            "ve"
+        ],
+        "que": [
+            "q",
+            "ve"
+        ],
+        "xue": [
+            "x",
+            "ve"
+        ],
+        "gve": [
+            "g",
+            "ve"
+        ],
+        "kve": [
+            "k",
+            "ve"
+        ],
+        "hve": [
+            "h",
+            "ve"
+        ],
+        "yue": [
+            "ve"
+        ],
+        "bai": [
+            "b",
+            "ai"
+        ],
+        "pai": [
+            "p",
+            "ai"
+        ],
+        "mai": [
+            "m",
+            "ai"
+        ],
+        "fai": [
+            "f",
+            "ai"
+        ],
+        "dai": [
+            "d",
+            "ai"
+        ],
+        "tai": [
+            "t",
+            "ai"
+        ],
+        "nai": [
+            "n",
+            "ai"
+        ],
+        "lai": [
+            "l",
+            "ai"
+        ],
+        "zai": [
+            "z",
+            "ai"
+        ],
+        "cai": [
+            "c",
+            "ai"
+        ],
+        "sai": [
+            "s",
+            "ai"
+        ],
+        "zhai": [
+            "zh",
+            "ai"
+        ],
+        "chai": [
+            "ch",
+            "ai"
+        ],
+        "shai": [
+            "sh",
+            "ai"
+        ],
+        "rai": [
+            "r",
+            "ai"
+        ],
+        "gai": [
+            "g",
+            "ai"
+        ],
+        "kai": [
+            "k",
+            "ai"
+        ],
+        "hai": [
+            "h",
+            "ai"
+        ],
+        "ai": [
+            "ai"
+        ],
+        "yai": [
+            "iai"
+        ],
+        "buai": [
+            "b",
+            "uai"
+        ],
+        "puai": [
+            "p",
+            "uai"
+        ],
+        "muai": [
+            "m",
+            "uai"
+        ],
+        "fuai": [
+            "f",
+            "uai"
+        ],
+        "duai": [
+            "d",
+            "uai"
+        ],
+        "tuai": [
+            "t",
+            "uai"
+        ],
+        "nuai": [
+            "n",
+            "uai"
+        ],
+        "luai": [
+            "l",
+            "uai"
+        ],
+        "zuai": [
+            "z",
+            "uai"
+        ],
+        "cuai": [
+            "c",
+            "uai"
+        ],
+        "suai": [
+            "s",
+            "uai"
+        ],
+        "zhuai": [
+            "zh",
+            "uai"
+        ],
+        "chuai": [
+            "ch",
+            "uai"
+        ],
+        "shuai": [
+            "sh",
+            "uai"
+        ],
+        "ruai": [
+            "r",
+            "uai"
+        ],
+        "guai": [
+            "g",
+            "uai"
+        ],
+        "kuai": [
+            "k",
+            "uai"
+        ],
+        "huai": [
+            "h",
+            "uai"
+        ],
+        "wai": [
+            "uai"
+        ],
+        "bei": [
+            "b",
+            "ei"
+        ],
+        "pei": [
+            "p",
+            "ei"
+        ],
+        "mei": [
+            "m",
+            "ei"
+        ],
+        "fei": [
+            "f",
+            "ei"
+        ],
+        "dei": [
+            "d",
+            "ei"
+        ],
+        "tei": [
+            "t",
+            "ei"
+        ],
+        "nei": [
+            "n",
+            "ei"
+        ],
+        "lei": [
+            "l",
+            "ei"
+        ],
+        "zei": [
+            "z",
+            "ei"
+        ],
+        "cei": [
+            "c",
+            "ei"
+        ],
+        "sei": [
+            "s",
+            "ei"
+        ],
+        "zhei": [
+            "zh",
+            "ei"
+        ],
+        "chei": [
+            "ch",
+            "ei"
+        ],
+        "shei": [
+            "sh",
+            "ei"
+        ],
+        "rei": [
+            "r",
+            "ei"
+        ],
+        "gei": [
+            "g",
+            "ei"
+        ],
+        "kei": [
+            "k",
+            "ei"
+        ],
+        "hei": [
+            "h",
+            "ei"
+        ],
+        "ei": [
+            "ei"
+        ],
+        "yei": [
+            "iei"
+        ],
+        "bui": [
+            "b",
+            "uei"
+        ],
+        "pui": [
+            "p",
+            "uei"
+        ],
+        "mui": [
+            "m",
+            "uei"
+        ],
+        "fui": [
+            "f",
+            "uei"
+        ],
+        "dui": [
+            "d",
+            "uei"
+        ],
+        "tui": [
+            "t",
+            "uei"
+        ],
+        "nui": [
+            "n",
+            "uei"
+        ],
+        "lui": [
+            "l",
+            "uei"
+        ],
+        "zui": [
+            "z",
+            "uei"
+        ],
+        "cui": [
+            "c",
+            "uei"
+        ],
+        "sui": [
+            "s",
+            "uei"
+        ],
+        "zhui": [
+            "zh",
+            "uei"
+        ],
+        "chui": [
+            "ch",
+            "uei"
+        ],
+        "shui": [
+            "sh",
+            "uei"
+        ],
+        "rui": [
+            "r",
+            "uei"
+        ],
+        "gui": [
+            "g",
+            "uei"
+        ],
+        "kui": [
+            "k",
+            "uei"
+        ],
+        "hui": [
+            "h",
+            "uei"
+        ],
+        "wei": [
+            "uei"
+        ],
+        "bao": [
+            "b",
+            "ao"
+        ],
+        "pao": [
+            "p",
+            "ao"
+        ],
+        "mao": [
+            "m",
+            "ao"
+        ],
+        "fao": [
+            "f",
+            "ao"
+        ],
+        "dao": [
+            "d",
+            "ao"
+        ],
+        "tao": [
+            "t",
+            "ao"
+        ],
+        "nao": [
+            "n",
+            "ao"
+        ],
+        "lao": [
+            "l",
+            "ao"
+        ],
+        "zao": [
+            "z",
+            "ao"
+        ],
+        "cao": [
+            "c",
+            "ao"
+        ],
+        "sao": [
+            "s",
+            "ao"
+        ],
+        "zhao": [
+            "zh",
+            "ao"
+        ],
+        "chao": [
+            "ch",
+            "ao"
+        ],
+        "shao": [
+            "sh",
+            "ao"
+        ],
+        "rao": [
+            "r",
+            "ao"
+        ],
+        "gao": [
+            "g",
+            "ao"
+        ],
+        "kao": [
+            "k",
+            "ao"
+        ],
+        "hao": [
+            "h",
+            "ao"
+        ],
+        "ao": [
+            "ao"
+        ],
+        "biao": [
+            "b",
+            "iao"
+        ],
+        "piao": [
+            "p",
+            "iao"
+        ],
+        "miao": [
+            "m",
+            "iao"
+        ],
+        "fiao": [
+            "f",
+            "iao"
+        ],
+        "diao": [
+            "d",
+            "iao"
+        ],
+        "tiao": [
+            "t",
+            "iao"
+        ],
+        "niao": [
+            "n",
+            "iao"
+        ],
+        "liao": [
+            "l",
+            "iao"
+        ],
+        "ziao": [
+            "z",
+            "iao"
+        ],
+        "ciao": [
+            "c",
+            "iao"
+        ],
+        "siao": [
+            "s",
+            "iao"
+        ],
+        "jiao": [
+            "j",
+            "iao"
+        ],
+        "qiao": [
+            "q",
+            "iao"
+        ],
+        "xiao": [
+            "x",
+            "iao"
+        ],
+        "giao": [
+            "g",
+            "iao"
+        ],
+        "kiao": [
+            "k",
+            "iao"
+        ],
+        "hiao": [
+            "h",
+            "iao"
+        ],
+        "yao": [
+            "iao"
+        ],
+        "wao": [
+            "uao"
+        ],
+        "bou": [
+            "b",
+            "ou"
+        ],
+        "pou": [
+            "p",
+            "ou"
+        ],
+        "mou": [
+            "m",
+            "ou"
+        ],
+        "fou": [
+            "f",
+            "ou"
+        ],
+        "dou": [
+            "d",
+            "ou"
+        ],
+        "tou": [
+            "t",
+            "ou"
+        ],
+        "nou": [
+            "n",
+            "ou"
+        ],
+        "lou": [
+            "l",
+            "ou"
+        ],
+        "zou": [
+            "z",
+            "ou"
+        ],
+        "cou": [
+            "c",
+            "ou"
+        ],
+        "sou": [
+            "s",
+            "ou"
+        ],
+        "zhou": [
+            "zh",
+            "ou"
+        ],
+        "chou": [
+            "ch",
+            "ou"
+        ],
+        "shou": [
+            "sh",
+            "ou"
+        ],
+        "rou": [
+            "r",
+            "ou"
+        ],
+        "gou": [
+            "g",
+            "ou"
+        ],
+        "kou": [
+            "k",
+            "ou"
+        ],
+        "hou": [
+            "h",
+            "ou"
+        ],
+        "ou": [
+            "ou"
+        ],
+        "biu": [
+            "b",
+            "iou"
+        ],
+        "piu": [
+            "p",
+            "iou"
+        ],
+        "miu": [
+            "m",
+            "iou"
+        ],
+        "fiu": [
+            "f",
+            "iou"
+        ],
+        "diu": [
+            "d",
+            "iou"
+        ],
+        "tiu": [
+            "t",
+            "iou"
+        ],
+        "niu": [
+            "n",
+            "iou"
+        ],
+        "liu": [
+            "l",
+            "iou"
+        ],
+        "jiu": [
+            "j",
+            "iou"
+        ],
+        "qiu": [
+            "q",
+            "iou"
+        ],
+        "xiu": [
+            "x",
+            "iou"
+        ],
+        "kiu": [
+            "k",
+            "iou"
+        ],
+        "you": [
+            "iou"
+        ],
+        "wou": [
+            "uou"
+        ],
+        "ban": [
+            "b",
+            "an"
+        ],
+        "pan": [
+            "p",
+            "an"
+        ],
+        "man": [
+            "m",
+            "an"
+        ],
+        "fan": [
+            "f",
+            "an"
+        ],
+        "dan": [
+            "d",
+            "an"
+        ],
+        "tan": [
+            "t",
+            "an"
+        ],
+        "nan": [
+            "n",
+            "an"
+        ],
+        "lan": [
+            "l",
+            "an"
+        ],
+        "zan": [
+            "z",
+            "an"
+        ],
+        "can": [
+            "c",
+            "an"
+        ],
+        "san": [
+            "s",
+            "an"
+        ],
+        "zhan": [
+            "zh",
+            "an"
+        ],
+        "chan": [
+            "ch",
+            "an"
+        ],
+        "shan": [
+            "sh",
+            "an"
+        ],
+        "ran": [
+            "r",
+            "an"
+        ],
+        "gan": [
+            "g",
+            "an"
+        ],
+        "kan": [
+            "k",
+            "an"
+        ],
+        "han": [
+            "h",
+            "an"
+        ],
+        "an": [
+            "an"
+        ],
+        "buan": [
+            "b",
+            "uan"
+        ],
+        "puan": [
+            "p",
+            "uan"
+        ],
+        "muan": [
+            "m",
+            "uan"
+        ],
+        "fuan": [
+            "f",
+            "uan"
+        ],
+        "duan": [
+            "d",
+            "uan"
+        ],
+        "tuan": [
+            "t",
+            "uan"
+        ],
+        "nuan": [
+            "n",
+            "uan"
+        ],
+        "luan": [
+            "l",
+            "uan"
+        ],
+        "zuan": [
+            "z",
+            "uan"
+        ],
+        "cuan": [
+            "c",
+            "uan"
+        ],
+        "suan": [
+            "s",
+            "uan"
+        ],
+        "zhuan": [
+            "zh",
+            "uan"
+        ],
+        "chuan": [
+            "ch",
+            "uan"
+        ],
+        "shuan": [
+            "sh",
+            "uan"
+        ],
+        "ruan": [
+            "r",
+            "uan"
+        ],
+        "guan": [
+            "g",
+            "uan"
+        ],
+        "kuan": [
+            "k",
+            "uan"
+        ],
+        "huan": [
+            "h",
+            "uan"
+        ],
+        "wan": [
+            "uan"
+        ],
+        "haen": [
+            "h",
+            "aen"
+        ],
+        "aen": [
+            "aen"
+        ],
+        "bian": [
+            "b",
+            "ian"
+        ],
+        "pian": [
+            "p",
+            "ian"
+        ],
+        "mian": [
+            "m",
+            "ian"
+        ],
+        "fian": [
+            "f",
+            "ian"
+        ],
+        "dian": [
+            "d",
+            "ian"
+        ],
+        "tian": [
+            "t",
+            "ian"
+        ],
+        "nian": [
+            "n",
+            "ian"
+        ],
+        "lian": [
+            "l",
+            "ian"
+        ],
+        "zian": [
+            "z",
+            "ian"
+        ],
+        "cian": [
+            "c",
+            "ian"
+        ],
+        "sian": [
+            "s",
+            "ian"
+        ],
+        "jian": [
+            "j",
+            "ian"
+        ],
+        "qian": [
+            "q",
+            "ian"
+        ],
+        "xian": [
+            "x",
+            "ian"
+        ],
+        "yan": [
+            "ian"
+        ],
+        "juan": [
+            "j",
+            "van"
+        ],
+        "quan": [
+            "q",
+            "van"
+        ],
+        "xuan": [
+            "x",
+            "van"
+        ],
+        "yuan": [
+            "van"
+        ],
+        "ben": [
+            "b",
+            "en"
+        ],
+        "pen": [
+            "p",
+            "en"
+        ],
+        "men": [
+            "m",
+            "en"
+        ],
+        "fen": [
+            "f",
+            "en"
+        ],
+        "den": [
+            "d",
+            "en"
+        ],
+        "ten": [
+            "t",
+            "en"
+        ],
+        "nen": [
+            "n",
+            "en"
+        ],
+        "len": [
+            "l",
+            "en"
+        ],
+        "zen": [
+            "z",
+            "en"
+        ],
+        "cen": [
+            "c",
+            "en"
+        ],
+        "sen": [
+            "s",
+            "en"
+        ],
+        "zhen": [
+            "zh",
+            "en"
+        ],
+        "chen": [
+            "ch",
+            "en"
+        ],
+        "shen": [
+            "sh",
+            "en"
+        ],
+        "ren": [
+            "r",
+            "en"
+        ],
+        "gen": [
+            "g",
+            "en"
+        ],
+        "ken": [
+            "k",
+            "en"
+        ],
+        "hen": [
+            "h",
+            "en"
+        ],
+        "en": [
+            "en"
+        ],
+        "bun": [
+            "b",
+            "uen"
+        ],
+        "pun": [
+            "p",
+            "uen"
+        ],
+        "mun": [
+            "m",
+            "uen"
+        ],
+        "fun": [
+            "f",
+            "uen"
+        ],
+        "dun": [
+            "d",
+            "uen"
+        ],
+        "tun": [
+            "t",
+            "uen"
+        ],
+        "nun": [
+            "n",
+            "uen"
+        ],
+        "lun": [
+            "l",
+            "uen"
+        ],
+        "zun": [
+            "z",
+            "uen"
+        ],
+        "cun": [
+            "c",
+            "uen"
+        ],
+        "sun": [
+            "s",
+            "uen"
+        ],
+        "zhun": [
+            "zh",
+            "uen"
+        ],
+        "chun": [
+            "ch",
+            "uen"
+        ],
+        "shun": [
+            "sh",
+            "uen"
+        ],
+        "run": [
+            "r",
+            "uen"
+        ],
+        "gun": [
+            "g",
+            "uen"
+        ],
+        "kun": [
+            "k",
+            "uen"
+        ],
+        "hun": [
+            "h",
+            "uen"
+        ],
+        "wen": [
+            "uen"
+        ],
+        "bin": [
+            "b",
+            "in"
+        ],
+        "pin": [
+            "p",
+            "in"
+        ],
+        "min": [
+            "m",
+            "in"
+        ],
+        "fin": [
+            "f",
+            "in"
+        ],
+        "din": [
+            "d",
+            "in"
+        ],
+        "tin": [
+            "t",
+            "in"
+        ],
+        "nin": [
+            "n",
+            "in"
+        ],
+        "lin": [
+            "l",
+            "in"
+        ],
+        "zin": [
+            "z",
+            "in"
+        ],
+        "cin": [
+            "c",
+            "in"
+        ],
+        "sin": [
+            "s",
+            "in"
+        ],
+        "jin": [
+            "j",
+            "in"
+        ],
+        "qin": [
+            "q",
+            "in"
+        ],
+        "xin": [
+            "x",
+            "in"
+        ],
+        "yin": [
+            "in"
+        ],
+        "jun": [
+            "j",
+            "vn"
+        ],
+        "qun": [
+            "q",
+            "vn"
+        ],
+        "xun": [
+            "x",
+            "vn"
+        ],
+        "yun": [
+            "vn"
+        ],
+        "bang": [
+            "b",
+            "ang"
+        ],
+        "pang": [
+            "p",
+            "ang"
+        ],
+        "mang": [
+            "m",
+            "ang"
+        ],
+        "fang": [
+            "f",
+            "ang"
+        ],
+        "dang": [
+            "d",
+            "ang"
+        ],
+        "tang": [
+            "t",
+            "ang"
+        ],
+        "nang": [
+            "n",
+            "ang"
+        ],
+        "lang": [
+            "l",
+            "ang"
+        ],
+        "zang": [
+            "z",
+            "ang"
+        ],
+        "cang": [
+            "c",
+            "ang"
+        ],
+        "sang": [
+            "s",
+            "ang"
+        ],
+        "zhang": [
+            "zh",
+            "ang"
+        ],
+        "chang": [
+            "ch",
+            "ang"
+        ],
+        "shang": [
+            "sh",
+            "ang"
+        ],
+        "rang": [
+            "r",
+            "ang"
+        ],
+        "gang": [
+            "g",
+            "ang"
+        ],
+        "kang": [
+            "k",
+            "ang"
+        ],
+        "hang": [
+            "h",
+            "ang"
+        ],
+        "ang": [
+            "ang"
+        ],
+        "biang": [
+            "b",
+            "iang"
+        ],
+        "piang": [
+            "p",
+            "iang"
+        ],
+        "miang": [
+            "m",
+            "iang"
+        ],
+        "fiang": [
+            "f",
+            "iang"
+        ],
+        "diang": [
+            "d",
+            "iang"
+        ],
+        "tiang": [
+            "t",
+            "iang"
+        ],
+        "niang": [
+            "n",
+            "iang"
+        ],
+        "liang": [
+            "l",
+            "iang"
+        ],
+        "ziang": [
+            "z",
+            "iang"
+        ],
+        "ciang": [
+            "c",
+            "iang"
+        ],
+        "siang": [
+            "s",
+            "iang"
+        ],
+        "jiang": [
+            "j",
+            "iang"
+        ],
+        "qiang": [
+            "q",
+            "iang"
+        ],
+        "xiang": [
+            "x",
+            "iang"
+        ],
+        "yang": [
+            "iang"
+        ],
+        "zuang": [
+            "z",
+            "uang"
+        ],
+        "cuang": [
+            "c",
+            "uang"
+        ],
+        "suang": [
+            "s",
+            "uang"
+        ],
+        "zhuang": [
+            "zh",
+            "uang"
+        ],
+        "chuang": [
+            "ch",
+            "uang"
+        ],
+        "shuang": [
+            "sh",
+            "uang"
+        ],
+        "ruang": [
+            "r",
+            "uang"
+        ],
+        "guang": [
+            "g",
+            "uang"
+        ],
+        "kuang": [
+            "k",
+            "uang"
+        ],
+        "huang": [
+            "h",
+            "uang"
+        ],
+        "wang": [
+            "uang"
+        ],
+        "beng": [
+            "b",
+            "eng"
+        ],
+        "peng": [
+            "p",
+            "eng"
+        ],
+        "meng": [
+            "m",
+            "eng"
+        ],
+        "feng": [
+            "f",
+            "eng"
+        ],
+        "deng": [
+            "d",
+            "eng"
+        ],
+        "teng": [
+            "t",
+            "eng"
+        ],
+        "neng": [
+            "n",
+            "eng"
+        ],
+        "leng": [
+            "l",
+            "eng"
+        ],
+        "zeng": [
+            "z",
+            "eng"
+        ],
+        "ceng": [
+            "c",
+            "eng"
+        ],
+        "seng": [
+            "s",
+            "eng"
+        ],
+        "zheng": [
+            "zh",
+            "eng"
+        ],
+        "cheng": [
+            "ch",
+            "eng"
+        ],
+        "sheng": [
+            "sh",
+            "eng"
+        ],
+        "reng": [
+            "r",
+            "eng"
+        ],
+        "geng": [
+            "g",
+            "eng"
+        ],
+        "keng": [
+            "k",
+            "eng"
+        ],
+        "heng": [
+            "h",
+            "eng"
+        ],
+        "eng": [
+            "eng"
+        ],
+        "weng": [
+            "ueng"
+        ],
+        "bing": [
+            "b",
+            "ing"
+        ],
+        "ping": [
+            "p",
+            "ing"
+        ],
+        "ming": [
+            "m",
+            "ing"
+        ],
+        "fing": [
+            "f",
+            "ing"
+        ],
+        "ding": [
+            "d",
+            "ing"
+        ],
+        "ting": [
+            "t",
+            "ing"
+        ],
+        "ning": [
+            "n",
+            "ing"
+        ],
+        "ling": [
+            "l",
+            "ing"
+        ],
+        "zing": [
+            "z",
+            "ing"
+        ],
+        "cing": [
+            "c",
+            "ing"
+        ],
+        "sing": [
+            "s",
+            "ing"
+        ],
+        "jing": [
+            "j",
+            "ing"
+        ],
+        "qing": [
+            "q",
+            "ing"
+        ],
+        "xing": [
+            "x",
+            "ing"
+        ],
+        "ging": [
+            "g",
+            "ing"
+        ],
+        "king": [
+            "k",
+            "ing"
+        ],
+        "hing": [
+            "h",
+            "ing"
+        ],
+        "ying": [
+            "ing"
+        ],
+        "bong": [
+            "b",
+            "ong"
+        ],
+        "pong": [
+            "p",
+            "ong"
+        ],
+        "mong": [
+            "m",
+            "ong"
+        ],
+        "fong": [
+            "f",
+            "ong"
+        ],
+        "dong": [
+            "d",
+            "ong"
+        ],
+        "tong": [
+            "t",
+            "ong"
+        ],
+        "nong": [
+            "n",
+            "ong"
+        ],
+        "long": [
+            "l",
+            "ong"
+        ],
+        "zong": [
+            "z",
+            "ong"
+        ],
+        "cong": [
+            "c",
+            "ong"
+        ],
+        "song": [
+            "s",
+            "ong"
+        ],
+        "zhong": [
+            "zh",
+            "ong"
+        ],
+        "chong": [
+            "ch",
+            "ong"
+        ],
+        "shong": [
+            "sh",
+            "ong"
+        ],
+        "rong": [
+            "r",
+            "ong"
+        ],
+        "gong": [
+            "g",
+            "ong"
+        ],
+        "kong": [
+            "k",
+            "ong"
+        ],
+        "hong": [
+            "h",
+            "ong"
+        ],
+        "ong": [
+            "ong"
+        ],
+        "jiong": [
+            "j",
+            "iong"
+        ],
+        "qiong": [
+            "q",
+            "iong"
+        ],
+        "xiong": [
+            "x",
+            "iong"
+        ],
+        "yong": [
+            "iong"
+        ],
+        "bar": [
+            "b",
+            "ar"
+        ],
+        "par": [
+            "p",
+            "ar"
+        ],
+        "mar": [
+            "m",
+            "ar"
+        ],
+        "far": [
+            "f",
+            "ar"
+        ],
+        "dar": [
+            "d",
+            "ar"
+        ],
+        "tar": [
+            "t",
+            "ar"
+        ],
+        "nar": [
+            "n",
+            "ar"
+        ],
+        "lar": [
+            "l",
+            "ar"
+        ],
+        "zar": [
+            "z",
+            "ar"
+        ],
+        "car": [
+            "c",
+            "ar"
+        ],
+        "sar": [
+            "s",
+            "ar"
+        ],
+        "zhar": [
+            "zh",
+            "ar"
+        ],
+        "char": [
+            "ch",
+            "ar"
+        ],
+        "shar": [
+            "sh",
+            "ar"
+        ],
+        "rar": [
+            "r",
+            "ar"
+        ],
+        "gar": [
+            "g",
+            "ar"
+        ],
+        "kar": [
+            "k",
+            "ar"
+        ],
+        "har": [
+            "h",
+            "ar"
+        ],
+        "ar": [
+            "ar"
+        ],
+        "biar": [
+            "b",
+            "iar"
+        ],
+        "piar": [
+            "p",
+            "iar"
+        ],
+        "miar": [
+            "m",
+            "iar"
+        ],
+        "fiar": [
+            "f",
+            "iar"
+        ],
+        "diar": [
+            "d",
+            "iar"
+        ],
+        "tiar": [
+            "t",
+            "iar"
+        ],
+        "niar": [
+            "n",
+            "iar"
+        ],
+        "liar": [
+            "l",
+            "iar"
+        ],
+        "jiar": [
+            "j",
+            "iar"
+        ],
+        "qiar": [
+            "q",
+            "iar"
+        ],
+        "xiar": [
+            "x",
+            "iar"
+        ],
+        "yar": [
+            "iar"
+        ],
+        "juar": [
+            "j",
+            "var"
+        ],
+        "quar": [
+            "q",
+            "var"
+        ],
+        "xuar": [
+            "x",
+            "var"
+        ],
+        "yuar": [
+            "var"
+        ],
+        "duar": [
+            "d",
+            "uar"
+        ],
+        "tuar": [
+            "t",
+            "uar"
+        ],
+        "nuar": [
+            "n",
+            "uar"
+        ],
+        "luar": [
+            "l",
+            "uar"
+        ],
+        "zuar": [
+            "z",
+            "uar"
+        ],
+        "cuar": [
+            "c",
+            "uar"
+        ],
+        "suar": [
+            "s",
+            "uar"
+        ],
+        "zhuar": [
+            "zh",
+            "uar"
+        ],
+        "chuar": [
+            "ch",
+            "uar"
+        ],
+        "shuar": [
+            "sh",
+            "uar"
+        ],
+        "ruar": [
+            "r",
+            "uar"
+        ],
+        "guar": [
+            "g",
+            "uar"
+        ],
+        "kuar": [
+            "k",
+            "uar"
+        ],
+        "huar": [
+            "h",
+            "uar"
+        ],
+        "war": [
+            "uar"
+        ],
+        "baor": [
+            "b",
+            "aor"
+        ],
+        "paor": [
+            "p",
+            "aor"
+        ],
+        "maor": [
+            "m",
+            "aor"
+        ],
+        "faor": [
+            "f",
+            "aor"
+        ],
+        "daor": [
+            "d",
+            "aor"
+        ],
+        "taor": [
+            "t",
+            "aor"
+        ],
+        "naor": [
+            "n",
+            "aor"
+        ],
+        "laor": [
+            "l",
+            "aor"
+        ],
+        "zaor": [
+            "z",
+            "aor"
+        ],
+        "caor": [
+            "c",
+            "aor"
+        ],
+        "saor": [
+            "s",
+            "aor"
+        ],
+        "zhaor": [
+            "zh",
+            "aor"
+        ],
+        "chaor": [
+            "ch",
+            "aor"
+        ],
+        "shaor": [
+            "sh",
+            "aor"
+        ],
+        "raor": [
+            "r",
+            "aor"
+        ],
+        "gaor": [
+            "g",
+            "aor"
+        ],
+        "kaor": [
+            "k",
+            "aor"
+        ],
+        "haor": [
+            "h",
+            "aor"
+        ],
+        "aor": [
+            "aor"
+        ],
+        "biaor": [
+            "b",
+            "iaor"
+        ],
+        "piaor": [
+            "p",
+            "iaor"
+        ],
+        "miaor": [
+            "m",
+            "iaor"
+        ],
+        "fiaor": [
+            "f",
+            "iaor"
+        ],
+        "diaor": [
+            "d",
+            "iaor"
+        ],
+        "tiaor": [
+            "t",
+            "iaor"
+        ],
+        "niaor": [
+            "n",
+            "iaor"
+        ],
+        "liaor": [
+            "l",
+            "iaor"
+        ],
+        "jiaor": [
+            "j",
+            "iaor"
+        ],
+        "qiaor": [
+            "q",
+            "iaor"
+        ],
+        "xiaor": [
+            "x",
+            "iaor"
+        ],
+        "yaor": [
+            "iaor"
+        ],
+        "beer": [
+            "b",
+            "eer"
+        ],
+        "peer": [
+            "p",
+            "eer"
+        ],
+        "meer": [
+            "m",
+            "eer"
+        ],
+        "feer": [
+            "f",
+            "eer"
+        ],
+        "deer": [
+            "d",
+            "eer"
+        ],
+        "teer": [
+            "t",
+            "eer"
+        ],
+        "neer": [
+            "n",
+            "eer"
+        ],
+        "leer": [
+            "l",
+            "eer"
+        ],
+        "zeer": [
+            "z",
+            "eer"
+        ],
+        "ceer": [
+            "c",
+            "eer"
+        ],
+        "seer": [
+            "s",
+            "eer"
+        ],
+        "zheer": [
+            "zh",
+            "eer"
+        ],
+        "cheer": [
+            "ch",
+            "eer"
+        ],
+        "sheer": [
+            "sh",
+            "eer"
+        ],
+        "reer": [
+            "r",
+            "eer"
+        ],
+        "geer": [
+            "g",
+            "eer"
+        ],
+        "keer": [
+            "k",
+            "eer"
+        ],
+        "heer": [
+            "h",
+            "eer"
+        ],
+        "eer": [
+            "eer"
+        ],
+        "bier": [
+            "b",
+            "ier"
+        ],
+        "pier": [
+            "p",
+            "ier"
+        ],
+        "mier": [
+            "m",
+            "ier"
+        ],
+        "fier": [
+            "f",
+            "ier"
+        ],
+        "dier": [
+            "d",
+            "ier"
+        ],
+        "tier": [
+            "t",
+            "ier"
+        ],
+        "nier": [
+            "n",
+            "ier"
+        ],
+        "lier": [
+            "l",
+            "ier"
+        ],
+        "jier": [
+            "j",
+            "ier"
+        ],
+        "qier": [
+            "q",
+            "ier"
+        ],
+        "xier": [
+            "x",
+            "ier"
+        ],
+        "yer": [
+            "ier"
+        ],
+        "nver": [
+            "n",
+            "ver"
+        ],
+        "lver": [
+            "l",
+            "ver"
+        ],
+        "juer": [
+            "j",
+            "ver"
+        ],
+        "quer": [
+            "q",
+            "ver"
+        ],
+        "xuer": [
+            "x",
+            "ver"
+        ],
+        "yuer": [
+            "ver"
+        ],
+        "bour": [
+            "b",
+            "our"
+        ],
+        "pour": [
+            "p",
+            "our"
+        ],
+        "mour": [
+            "m",
+            "our"
+        ],
+        "four": [
+            "f",
+            "our"
+        ],
+        "dour": [
+            "d",
+            "our"
+        ],
+        "tour": [
+            "t",
+            "our"
+        ],
+        "nour": [
+            "n",
+            "our"
+        ],
+        "lour": [
+            "l",
+            "our"
+        ],
+        "zour": [
+            "z",
+            "our"
+        ],
+        "cour": [
+            "c",
+            "our"
+        ],
+        "sour": [
+            "s",
+            "our"
+        ],
+        "zhour": [
+            "zh",
+            "our"
+        ],
+        "chour": [
+            "ch",
+            "our"
+        ],
+        "shour": [
+            "sh",
+            "our"
+        ],
+        "rour": [
+            "r",
+            "our"
+        ],
+        "gour": [
+            "g",
+            "our"
+        ],
+        "kour": [
+            "k",
+            "our"
+        ],
+        "hour": [
+            "h",
+            "our"
+        ],
+        "our": [
+            "our"
+        ],
+        "biur": [
+            "b",
+            "iour"
+        ],
+        "piur": [
+            "p",
+            "iour"
+        ],
+        "miur": [
+            "m",
+            "iour"
+        ],
+        "fiur": [
+            "f",
+            "iour"
+        ],
+        "diur": [
+            "d",
+            "iour"
+        ],
+        "tiur": [
+            "t",
+            "iour"
+        ],
+        "niur": [
+            "n",
+            "iour"
+        ],
+        "liur": [
+            "l",
+            "iour"
+        ],
+        "jiur": [
+            "j",
+            "iour"
+        ],
+        "qiur": [
+            "q",
+            "iour"
+        ],
+        "xiur": [
+            "x",
+            "iour"
+        ],
+        "your": [
+            "iour"
+        ],
+        "bor": [
+            "b",
+            "uor"
+        ],
+        "por": [
+            "p",
+            "uor"
+        ],
+        "mor": [
+            "m",
+            "uor"
+        ],
+        "for": [
+            "f",
+            "uor"
+        ],
+        "duor": [
+            "d",
+            "uor"
+        ],
+        "tuor": [
+            "t",
+            "uor"
+        ],
+        "nuor": [
+            "n",
+            "uor"
+        ],
+        "luor": [
+            "l",
+            "uor"
+        ],
+        "zuor": [
+            "z",
+            "uor"
+        ],
+        "cuor": [
+            "c",
+            "uor"
+        ],
+        "suor": [
+            "s",
+            "uor"
+        ],
+        "zhuor": [
+            "zh",
+            "uor"
+        ],
+        "chuor": [
+            "ch",
+            "uor"
+        ],
+        "shuor": [
+            "sh",
+            "uor"
+        ],
+        "ruor": [
+            "r",
+            "uor"
+        ],
+        "guor": [
+            "g",
+            "uor"
+        ],
+        "kuor": [
+            "k",
+            "uor"
+        ],
+        "huor": [
+            "h",
+            "uor"
+        ],
+        "wor": [
+            "uor"
+        ],
+        "ber": [
+            "b",
+            "er"
+        ],
+        "per": [
+            "p",
+            "er"
+        ],
+        "mer": [
+            "m",
+            "er"
+        ],
+        "fer": [
+            "f",
+            "er"
+        ],
+        "der": [
+            "d",
+            "er"
+        ],
+        "ter": [
+            "t",
+            "er"
+        ],
+        "ner": [
+            "n",
+            "er"
+        ],
+        "ler": [
+            "l",
+            "er"
+        ],
+        "zer": [
+            "z",
+            "er"
+        ],
+        "cer": [
+            "c",
+            "er"
+        ],
+        "ser": [
+            "s",
+            "er"
+        ],
+        "zher": [
+            "zh",
+            "er"
+        ],
+        "cher": [
+            "ch",
+            "er"
+        ],
+        "sher": [
+            "sh",
+            "er"
+        ],
+        "rer": [
+            "r",
+            "er"
+        ],
+        "ger": [
+            "g",
+            "er"
+        ],
+        "ker": [
+            "k",
+            "er"
+        ],
+        "her": [
+            "h",
+            "er"
+        ],
+        "er": [
+            "er"
+        ],
+        "bir": [
+            "b",
+            "ir"
+        ],
+        "pir": [
+            "p",
+            "ir"
+        ],
+        "mir": [
+            "m",
+            "ir"
+        ],
+        "fir": [
+            "f",
+            "ir"
+        ],
+        "dir": [
+            "d",
+            "ir"
+        ],
+        "tir": [
+            "t",
+            "ir"
+        ],
+        "nir": [
+            "n",
+            "ir"
+        ],
+        "lir": [
+            "l",
+            "ir"
+        ],
+        "jir": [
+            "j",
+            "ir"
+        ],
+        "qir": [
+            "q",
+            "ir"
+        ],
+        "xir": [
+            "x",
+            "ir"
+        ],
+        "yir": [
+            "ir"
+        ],
+        "nvr": [
+            "n",
+            "vr"
+        ],
+        "lvr": [
+            "l",
+            "vr"
+        ],
+        "jur": [
+            "j",
+            "vr"
+        ],
+        "qur": [
+            "q",
+            "vr"
+        ],
+        "xur": [
+            "x",
+            "vr"
+        ],
+        "yur": [
+            "vr"
+        ],
+        "duer": [
+            "d",
+            "uer"
+        ],
+        "tuer": [
+            "t",
+            "uer"
+        ],
+        "nuer": [
+            "n",
+            "uer"
+        ],
+        "luer": [
+            "l",
+            "uer"
+        ],
+        "zuer": [
+            "z",
+            "uer"
+        ],
+        "cuer": [
+            "c",
+            "uer"
+        ],
+        "suer": [
+            "s",
+            "uer"
+        ],
+        "zhuer": [
+            "zh",
+            "uer"
+        ],
+        "chuer": [
+            "ch",
+            "uer"
+        ],
+        "shuer": [
+            "sh",
+            "uer"
+        ],
+        "ruer": [
+            "r",
+            "uer"
+        ],
+        "guer": [
+            "g",
+            "uer"
+        ],
+        "kuer": [
+            "k",
+            "uer"
+        ],
+        "huer": [
+            "h",
+            "uer"
+        ],
+        "wer": [
+            "uer"
+        ],
+        "bur": [
+            "b",
+            "ur"
+        ],
+        "pur": [
+            "p",
+            "ur"
+        ],
+        "mur": [
+            "m",
+            "ur"
+        ],
+        "fur": [
+            "f",
+            "ur"
+        ],
+        "dur": [
+            "d",
+            "ur"
+        ],
+        "tur": [
+            "t",
+            "ur"
+        ],
+        "nur": [
+            "n",
+            "ur"
+        ],
+        "lur": [
+            "l",
+            "ur"
+        ],
+        "zur": [
+            "z",
+            "ur"
+        ],
+        "cur": [
+            "c",
+            "ur"
+        ],
+        "sur": [
+            "s",
+            "ur"
+        ],
+        "zhur": [
+            "zh",
+            "ur"
+        ],
+        "chur": [
+            "ch",
+            "ur"
+        ],
+        "shur": [
+            "sh",
+            "ur"
+        ],
+        "rur": [
+            "r",
+            "ur"
+        ],
+        "gur": [
+            "g",
+            "ur"
+        ],
+        "kur": [
+            "k",
+            "ur"
+        ],
+        "hur": [
+            "h",
+            "ur"
+        ],
+        "wur": [
+            "ur"
+        ],
+        "bangr": [
+            "b",
+            "angr"
+        ],
+        "pangr": [
+            "p",
+            "angr"
+        ],
+        "mangr": [
+            "m",
+            "angr"
+        ],
+        "fangr": [
+            "f",
+            "angr"
+        ],
+        "dangr": [
+            "d",
+            "angr"
+        ],
+        "tangr": [
+            "t",
+            "angr"
+        ],
+        "nangr": [
+            "n",
+            "angr"
+        ],
+        "langr": [
+            "l",
+            "angr"
+        ],
+        "zangr": [
+            "z",
+            "angr"
+        ],
+        "cangr": [
+            "c",
+            "angr"
+        ],
+        "sangr": [
+            "s",
+            "angr"
+        ],
+        "zhangr": [
+            "zh",
+            "angr"
+        ],
+        "changr": [
+            "ch",
+            "angr"
+        ],
+        "shangr": [
+            "sh",
+            "angr"
+        ],
+        "rangr": [
+            "r",
+            "angr"
+        ],
+        "gangr": [
+            "g",
+            "angr"
+        ],
+        "kangr": [
+            "k",
+            "angr"
+        ],
+        "hangr": [
+            "h",
+            "angr"
+        ],
+        "angr": [
+            "angr"
+        ],
+        "biangr": [
+            "b",
+            "iangr"
+        ],
+        "niangr": [
+            "n",
+            "iangr"
+        ],
+        "liangr": [
+            "l",
+            "iangr"
+        ],
+        "jiangr": [
+            "j",
+            "iangr"
+        ],
+        "qiangr": [
+            "q",
+            "iangr"
+        ],
+        "xiangr": [
+            "x",
+            "iangr"
+        ],
+        "yangr": [
+            "iangr"
+        ],
+        "zhuangr": [
+            "zh",
+            "uangr"
+        ],
+        "chuangr": [
+            "ch",
+            "uangr"
+        ],
+        "shuangr": [
+            "sh",
+            "uangr"
+        ],
+        "ruangr": [
+            "r",
+            "uangr"
+        ],
+        "guangr": [
+            "g",
+            "uangr"
+        ],
+        "kuangr": [
+            "k",
+            "uangr"
+        ],
+        "huangr": [
+            "h",
+            "uangr"
+        ],
+        "wangr": [
+            "uangr"
+        ],
+        "bengr": [
+            "b",
+            "engr"
+        ],
+        "pengr": [
+            "p",
+            "engr"
+        ],
+        "mengr": [
+            "m",
+            "engr"
+        ],
+        "fengr": [
+            "f",
+            "engr"
+        ],
+        "dengr": [
+            "d",
+            "engr"
+        ],
+        "tengr": [
+            "t",
+            "engr"
+        ],
+        "nengr": [
+            "n",
+            "engr"
+        ],
+        "lengr": [
+            "l",
+            "engr"
+        ],
+        "zengr": [
+            "z",
+            "engr"
+        ],
+        "cengr": [
+            "c",
+            "engr"
+        ],
+        "sengr": [
+            "s",
+            "engr"
+        ],
+        "zhengr": [
+            "zh",
+            "engr"
+        ],
+        "chengr": [
+            "ch",
+            "engr"
+        ],
+        "shengr": [
+            "sh",
+            "engr"
+        ],
+        "rengr": [
+            "r",
+            "engr"
+        ],
+        "gengr": [
+            "g",
+            "engr"
+        ],
+        "kengr": [
+            "k",
+            "engr"
+        ],
+        "hengr": [
+            "h",
+            "engr"
+        ],
+        "engr": [
+            "engr"
+        ],
+        "bingr": [
+            "b",
+            "ingr"
+        ],
+        "pingr": [
+            "p",
+            "ingr"
+        ],
+        "mingr": [
+            "m",
+            "ingr"
+        ],
+        "fingr": [
+            "f",
+            "ingr"
+        ],
+        "dingr": [
+            "d",
+            "ingr"
+        ],
+        "tingr": [
+            "t",
+            "ingr"
+        ],
+        "ningr": [
+            "n",
+            "ingr"
+        ],
+        "lingr": [
+            "l",
+            "ingr"
+        ],
+        "jingr": [
+            "j",
+            "ingr"
+        ],
+        "qingr": [
+            "q",
+            "ingr"
+        ],
+        "xingr": [
+            "x",
+            "ingr"
+        ],
+        "yingr": [
+            "ingr"
+        ],
+        "wengr": [
+            "uengr"
+        ],
+        "dongr": [
+            "d",
+            "ongr"
+        ],
+        "tongr": [
+            "t",
+            "ongr"
+        ],
+        "nongr": [
+            "n",
+            "ongr"
+        ],
+        "longr": [
+            "l",
+            "ongr"
+        ],
+        "zongr": [
+            "z",
+            "ongr"
+        ],
+        "congr": [
+            "c",
+            "ongr"
+        ],
+        "songr": [
+            "s",
+            "ongr"
+        ],
+        "zhongr": [
+            "zh",
+            "ongr"
+        ],
+        "chongr": [
+            "ch",
+            "ongr"
+        ],
+        "shongr": [
+            "sh",
+            "ongr"
+        ],
+        "rongr": [
+            "r",
+            "ongr"
+        ],
+        "gongr": [
+            "g",
+            "ongr"
+        ],
+        "kongr": [
+            "k",
+            "ongr"
+        ],
+        "hongr": [
+            "h",
+            "ongr"
+        ],
+        "ongr": [
+            "ongr"
+        ],
+        "jiongr": [
+            "j",
+            "iongr"
+        ],
+        "qiongr": [
+            "q",
+            "iongr"
+        ],
+        "xiongr": [
+            "x",
+            "iongr"
+        ],
+        "yongr": [
+            "iongr"
+        ],
+        "m": [
+            "mm"
+        ],
+        "n": [
+            "nn"
+        ],
+        "ng": [
+            "ng"
+        ],
+        "lue": [
+            "l",
+            "ve"
+        ],
+        
+        "ii":[
+            "ii"
+        ],
+        "iii":[
+            "iii"
+        ],
+        "u":[
+            "u"
+        ],
+        "v":[
+            "v"
+        ],
+        "ia":[
+            "ia"
+        ],
+        "ua":[
+            ""
+        ],
+        "eh":[
+            "eh"
+        ],
+        "uo":[
+            "uo"
+        ],
+        "io":[
+            "io"
+        ],
+        "ie":[
+            "ie"
+        ],
+        "uae":[
+            "uae"
+        ],
+        "ve":[
+            "ve"
+        ],
+        "iai":[
+            "iai"
+        ],
+        "uai":[
+            "uai"
+        ],
+        "iei":[
+            "iei"
+        ],
+        "uei":[
+            "uei"
+        ],
+        "iao":[
+            "iao"
+        ],
+        "uao":[
+            "uao"
+        ],
+        "iou":[
+            "iou"
+        ],
+        "uou":[
+            "uou"
+        ],
+        "uan":[
+            "uan"
+        ],
+        "ian":[
+            "ian"
+        ],
+        "van":[
+            "van"
+        ],
+        "uen":[
+            "uen"
+        ],
+        "in":[
+            "in"
+        ],
+        "vn":[
+            "vn"
+        ],
+        "iang":[
+            "ang"
+        ],
+        "uang":[
+            "uang"
+        ],
+        "ueng":[
+            "ueng"
+        ],
+        "ing":[
+            "ing"
+        ],
+        "iong":[
+            "iong"
+        ],
+        "yar":[
+            "iar"
+        ],
+        "iuar":[
+            "iuar"
+        ],
+        "ier":[
+            "ier"
+        ],
+        "iuer":[
+            "iour"
+        ],
+        "uor":[
+            "uor"
+        ],
+        "ir":[
+            "ir"
+        ],
+        "vr":[
+            "vr"
+        ],
+        "uer":[
+            "uer"
+        ],
+        "ur":[
+            "ur"
+        ],
+        "iangr":[
+            "iangr"
+        ],
+        "uangr":[
+            "uangr"
+        ],
+        "ingr":[
+            "ingr"
+        ],
+        "uengr":[
+            "uengr"
+        ],
+        "iongr":[
+            "iongr"
+        ],
+        "mm":[
+            "mm"
+        ],
+        "nn":[
+            "nn"
+        ]
+        
+        
+    },
+    "phon_id": {
+        "z": 0,
+        "ii": 1,
+        "c": 2,
+        "s": 3,
+        "zh": 4,
+        "iii": 5,
+        "ch": 6,
+        "sh": 7,
+        "b": 8,
+        "i": 9,
+        "p": 10,
+        "m": 11,
+        "f": 12,
+        "d": 13,
+        "t": 14,
+        "n": 15,
+        "l": 16,
+        "r": 17,
+        "j": 18,
+        "q": 19,
+        "x": 20,
+        "g": 21,
+        "k": 22,
+        "h": 23,
+        "u": 24,
+        "v": 25,
+        "a": 26,
+        "ia": 27,
+        "ua": 28,
+        "eh": 29,
+        "e": 30,
+        "uo": 31,
+        "o": 32,
+        "io": 33,
+        "ae": 34,
+        "ie": 35,
+        "uae": 36,
+        "ve": 37,
+        "ai": 38,
+        "iai": 39,
+        "uai": 40,
+        "ei": 41,
+        "iei": 42,
+        "uei": 43,
+        "ao": 44,
+        "iao": 45,
+        "uao": 46,
+        "ou": 47,
+        "iou": 48,
+        "uou": 49,
+        "an": 50,
+        "uan": 51,
+        "aen": 52,
+        "ian": 53,
+        "van": 54,
+        "en": 55,
+        "uen": 56,
+        "in": 57,
+        "vn": 58,
+        "ang": 59,
+        "iang": 60,
+        "uang": 61,
+        "eng": 62,
+        "ueng": 63,
+        "ing": 64,
+        "ong": 65,
+        "iong": 66,
+        "ar": 67,
+        "iar": 68,
+        "var": 69,
+        "aor": 70,
+        "iaor": 71,
+        "eer": 72,
+        "ier": 73,
+        "ver": 74,
+        "our": 75,
+        "iour": 76,
+        "uor": 77,
+        "er": 78,
+        "ir": 79,
+        "vr": 80,
+        "uer": 81,
+        "ur": 82,
+        "angr": 83,
+        "iangr": 84,
+        "uangr": 85,
+        "engr": 86,
+        "ingr": 87,
+        "uengr": 88,
+        "ongr": 89,
+        "iongr": 90,
+        "mm": 91,
+        "nn": 92,
+        "ng": 93
+    },
+    "phon_class": {
+        "head": [
+            "k",
+            "p",
+            "s",
+            "h",
+            "t",
+            "j",
+            "c",
+            "b",
+            "z",
+            "m",
+            "g",
+            "l",
+            "d",
+            "ch",
+            "zh",
+            "x",
+            "q",
+            "sh",
+            "f",
+            "n",
+            "r"
+        ],
+        "tail": [
+            "ii",
+            "iii",
+            "i",
+            "u",
+            "v",
+            "a",
+            "ia",
+            "ua",
+            "eh",
+            "e",
+            "uo",
+            "o",
+            "io",
+            "ae",
+            "ie",
+            "uae",
+            "ve",
+            "ai",
+            "iai",
+            "uai",
+            "ei",
+            "iei",
+            "uei",
+            "ao",
+            "iao",
+            "uao",
+            "ou",
+            "iou",
+            "uou",
+            "an",
+            "uan",
+            "aen",
+            "ian",
+            "van",
+            "en",
+            "uen",
+            "in",
+            "vn",
+            "ang",
+            "iang",
+            "uang",
+            "eng",
+            "ueng",
+            "ing",
+            "ong",
+            "iong",
+            "ar",
+            "iar",
+            "var",
+            "uar",
+            "aor",
+            "iaor",
+            "eer",
+            "ier",
+            "ver",
+            "our",
+            "iour",
+            "uor",
+            "er",
+            "ir",
+            "vr",
+            "uer",
+            "ur",
+            "angr",
+            "iangr",
+            "uangr",
+            "engr",
+            "ingr",
+            "uengr",
+            "ongr",
+            "iongr",
+            "mm",
+            "nn",
+            "ng"
+        ]
+    },
+    "consonant_class":{
+        "voice_plosives":["b", "d", "g"],
+        "plosives":["b", "d", "g", "p", "t", "k"],
+        "sonorants": ["m", "n", "l", "r"]
+    },
+    "vowel_holding_dict":{
+        "ao": "o",
+        "ou": "u",
+        "an": "ng",
+        "en": "ng",
+        "in": "ng",
+        "ang": "ng",
+        "eng": "ng",
+        "ong": "ng",
+        "ing": "ng",
+        "ia": "a",
+        "iao": "o",
+        "ian": "ng",
+        "iang": "ng",
+        "ie": "ei",
+        "iong": "ng",
+        "iou": "u",
+        "ua": "a",
+        "uo": "o",
+        "uai": "ai",
+        "uei": "ei",
+        "uan": "ng",
+        "uang": "ng",
+        "uen": "ng",
+        "ueng": "ng",
+        "ve": "e",
+        "van": "ng",
+        "vn": "ng"
+    }
+}
